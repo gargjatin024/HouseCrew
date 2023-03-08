@@ -1,0 +1,46 @@
+<div class="container serve">
+    <h3 class="head" style="text-align: center; border-style: groove;">Add a Service</h3>
+<form [formGroup]="validationform"  (ngSubmit)="validSubmit()" enctype="multipart/form-data"><!--(ngSubmit)="validSubmit(edit_id)"-->
+   <div class="form-check"><label>Service Name: </label>
+    <input type="text" class="form-control" formControlName="service" placeholder="Enter Service Name">
+    <div *ngIf="submit && e.service.errors">
+        <span *ngIf="e.service.errors.required" style="color:red;">Service Name Is
+            required.</span>
+            </div>
+    <label>Service Include: </label>
+    <input type="text" class="form-control" formControlName="include" placeholder="Enter Service Includes">
+    <div *ngIf="submit && e.include.errors">
+        <span *ngIf="e.include.errors.required" style="color:red;">Includes Are Also 
+            Required.</span>
+            </div>
+</div>
+    <br/><button type="submit" class="btn btn-block btn-primary">Add</button>{{success}}
+    <!--<br/><button type="submit" class="btn btn-block btn-dark">update</button>{{updated}}-->
+</form><br/>
+<div>
+    <h3 class="head" style="text-align: center; border-style: groove;">List of Services</h3><br/>
+<table class="center" style="justify-content: center; margin-left: auto; margin-right: auto;">
+    <tr>
+    <th>S.No.</th>
+    <th>Name of Service</th>
+    <th>Service Includes</th>
+    <th>Take Action</th>
+    </tr>
+    <tr *ngFor="let row of dataList, let i = index">
+        <td>{{i+1}}</td>
+        <td>{{row.service}}</td>
+        <td>{{row.include}}</td>
+        <td>
+            <a href="javascript: void(0);" (click)="delete(row._id)" class="btn btn-primary btn-sm"
+                style="margin-right: 3px;">
+                Delete
+            </a>
+<!--<a href="javascript: void(0);" [routerLink]="['/dashboard/addservice', row._id]"
+                class="btn btn-primary btn-sm" style="margin-right: 3px;">
+                Edit
+            </a>-->
+        </td>
+    </tr>
+</table>
+</div>
+</div>

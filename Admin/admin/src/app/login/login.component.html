@@ -1,0 +1,45 @@
+<body style="background-image: url('/assets/loginbg.jpeg'); background-size: cover; height: 660px;">
+    <div class="container" style="padding-top: 140px;">
+    <div class="row">
+        <div class="col-7" style="margin-top: 8px; margin-bottom: 7px;">
+            <div class="log"> 
+             <img src="assets/login.jpg" style="border-radius: 10px; height: 335px;" width="100%"/>
+             <h1 class="first">HouseCrew</h1>
+             <h5 class="second">At Your Service</h5>
+             <p class="last">A Phone Call Away From Your Place</p>
+            </div>
+        </div>
+        <div class="col-5">
+            <form action="" style="padding: 20px; margin-top: 9px; margin-bottom: 8px; background-color: silver;
+                        border-radius: 20px;"  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="login-title"><u>ADMIN PANEL</u></div>
+                <div class="form-group">
+                    <label>User Name:</label>
+                    <input type="text" class="form-control" formControlName="username" placeholder="Enter Username"/>
+                    <div *ngIf="submitted && e.username.errors">
+                        <span *ngIf="e.username.errors.required" style="color:red;">Please User Name
+                            required.</span>
+                            </div>
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" class="form-control" formControlName="password" placeholder="Enter Password"/>
+                    <div *ngIf="submitted && e.password.errors">
+                        <span *ngIf="e.password.errors.required" style="color:red;">Please Password
+                            required.</span>
+                    </div>
+                </div>
+                <input type="checkbox"/> Remember Me
+                <div style="padding-left: 10px;">
+                <button type="submit" class="btn btn-primary btn-block">Login</button></div>
+                <div class="errorSec">
+                    {{errorMsg}}
+                </div>
+                <div class="login-help" style="text-align: center;">
+                     <a href="#">Forgot your password?</a>
+                  </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>

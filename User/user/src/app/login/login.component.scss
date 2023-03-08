@@ -1,0 +1,96 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url(/assets/Banner.jpg);
+    height: 655px;
+    background-size: cover;
+}
+
+.img-container{
+    position: absolute;
+    right: 0%;
+}
+
+.row{
+    background-color: #ffff;
+    border-radius: 10px;
+    width: 55%;
+    position: relative;
+    top: 15%;
+    left: 22%;
+}
+
+.head-si{
+    text-align: center;
+    font-weight: bolder;
+    margin: 10% auto;
+    color: lightskyblue;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inputbox{
+    width: 70%;
+    margin: 10% auto;
+    text-align: center;
+}
+
+.inputVal{
+    border: none;
+    background-color: #EEEEEE;
+    height: 30px;
+}
+
+.btn-signin{
+    padding: 2% 10.5%;
+    background-color: lightskyblue;
+    border-radius: 320px;
+    font-weight: bold;
+    color: white;
+}
+
+.login-icon{
+    margin: 3.3% 5% 4% 5%;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 100%;
+    border-color: lightgray;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.right-container{
+    background-image: url(/assets/design.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.right-heading{
+    text-align: center;
+    margin: 20% auto 30%;
+    font-family: 'Montserrat', sans-serif;
+    color: #548CA8;
+}
+
+.right-headchild{
+    font-size: 230%;
+}
+
+.r-para{
+    color: #476072;
+}
+
+.btn-signup{
+    margin-top: 15%;
+    padding: 2% 10.5%;
+    background-color: transparent;
+    border: 2px solid #548CA8;
+    border-radius: 320px;
+    font-weight: bold;
+    color: #548CA8;
+}

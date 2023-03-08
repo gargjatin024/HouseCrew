@@ -1,0 +1,27 @@
+.feedback{
+    padding: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.widget .panel-body {
+    padding:0px;
+}
+.widget .list-group {
+     margin-bottom: 0;
+}
+.panel-heading{
+    background-color: darkgray;
+}
+.widget .panel-title { display:inline }
+.widget .label-info { float: right; }
+.widget li.list-group-item {border-radius: 0;border: 0;border-top: 1px solid #ddd;}
+.widget li.list-group-item:hover { background-color: rgba(86,61,124,.1); }
+.widget .mic-info { color: #666666;font-size: 13px; }
+.widget .action { margin-top:5px; }
+.widget .comment-text { font-size: 16px; }
+.widget .btn-block { border-top-left-radius:0px;border-top-right-radius:0px; }
+.btn{
+    font-size: 12px;
+}

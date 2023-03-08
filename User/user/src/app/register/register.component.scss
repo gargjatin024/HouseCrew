@@ -1,0 +1,48 @@
+body{
+    background-image: url(/assets/signupbg.jpg);
+    min-height: 655px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-logo{
+    float: right;
+    width: 15%;
+}
+
+.title-signup{
+    text-align: center;
+    margin: 30% 2%; 
+    width: auto;
+    transform: rotate(-20deg);
+    color: green;
+    border: 5px;
+    border-style: inset;
+    border-radius: 20px;
+    background-color: white;
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: 2vw;
+}
+
+.hc{
+    font-family: 'Festive', cursive;
+    font-weight: 900;
+    font-size: 4vw;
+}
+
+.form-box{
+    width: 55%;
+    padding: 1.5%;
+    background-color: #ffff;
+    margin-top: 4%;
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    font-weight: 500;
+    background-image: url(/assets/form.jpg);
+    background-size: cover;
+}
+
+.btn-signup{
+    padding: 6px 25px;
+}

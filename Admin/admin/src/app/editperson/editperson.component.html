@@ -1,0 +1,97 @@
+<div class="container person">
+    <form [formGroup]="validationform" (ngSubmit)="validSubmit(edit_id)" enctype="multipart/form-data">
+      <div>
+      <h2 class="head" style="text-align: center; border-style: groove;">Update Service Person</h2>
+      <h4 style="text-align: center; color: dimgrey;">Enter Details</h4>
+      </div>
+        <div class="form-group">
+            <label for="Name">Name:</label>
+            <input type="text" class="form-control" formControlName="person" id="exampleInputname" placeholder="Enter Name">
+            <div *ngIf="submit && e.person.errors">
+              <span *ngIf="e.person.errors.required" style="color:red;">Name Is
+                  required.</span>
+                  </div>
+          </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address:</label>
+          <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" placeholder="Enter email">
+          <div *ngIf="submit && e.email.errors">
+            <span *ngIf="e.email.errors.required" style="color:red;">Email Is
+                required.</span>
+                </div>
+        
+        </div>
+        
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input type="text" class="form-control" formControlName="city" id="exampleInputcity" placeholder="Enter City">
+          <div *ngIf="submit && e.city.errors">
+            <span *ngIf="e.city.errors.required" style="color:red;">City Is
+                required.</span>
+                </div>
+        </div>
+        <div class="row">
+        <div class="form-group col-6">
+          <label for="service">Service type:</label>
+          <input type="text" class="form-control" formControlName="service" id="exampleInputservice" placeholder="Enter Service type">
+          <div *ngIf="submit && e.service.errors">
+            <span *ngIf="e.service.errors.required" style="color:red;">Service Name Is
+                required.</span>
+                </div>
+        </div>
+        <div class="form-group col-6">
+          <label for="contact">Contact Number:</label>
+          <input type="text" class="form-control" formControlName="phone" id="contact" placeholder=" Enter Contact Nubmer">
+          <div *ngIf="submit && e.phone.errors">
+            <span *ngIf="e.phone.errors.required" style="color:red;">Contact Information Is
+                required.</span>
+                </div>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-2"><label>Gender:</label></div>
+          <div class="form-check col-2">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Female
+            </label>
+          </div>
+          <div class="form-check col-2">      
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Male
+                </label>
+          </div>
+        </div>
+    
+      <div class="row">
+        <div class="form-group col-6">
+          <label for="age">Age:</label>
+          <input type="number" class="form-control" formControlName="age" id="age" placeholder=" Enter Age">
+          <div *ngIf="submit && e.age.errors">
+            <span *ngIf="e.age.errors.required" style="color:red;">Age Is
+                required.</span>
+                </div>
+        </div>
+        <div class="form-group col-6">
+          <label for="charges">Charges Per Services:</label>
+          <input type="number" class="form-control" formControlName="charges" id="charges" placeholder=" Enter Charges">
+          <div *ngIf="submit && e.charges.errors">
+            <span *ngIf="e.charges.errors.required" style="color:red;">Required.</span>
+                </div>
+        </div>
+      </div>
+        <div class="form-group">
+          <label for="registed">Registed At Date:</label>
+          <input type="date" class="form-control" formControlName="date" id="date" placeholder=" Enter Date">
+          <div *ngIf="submit && e.date.errors">
+            <span *ngIf="e.date.errors.required" style="color:red;">Required.</span>
+                </div>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-block btn-outline-success">Update</button>{{success}}
+      </form><br/><br/>
+    </div>
